@@ -1,0 +1,38 @@
+<launch>
+  <arg name="robot_namespace" value="tango" />
+  <arg name="tango_sim" default="false" />
+  <arg name="publish_urdf" default="true" />
+  <arg name="use_tf_static" default="true" />
+  <param name="/use_sim_time" value="true" if="$(arg tango_sim)" />
+
+  <group if="$(arg publish_urdf)">
+    <param name="robot_description" command="$(find xacro)/xacro '$(find tango_description)/urdf/tango.urdf.xacro'" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+      <param name="use_tf_static" value="$(arg use_tf_static" />
+    </node>
+    <remap from="/joint_states" to="/tango/joint_states" />
+  </group>
+  <rosparam param="base_frame_id">"base_link"</rosparam>
+
+
+  <group if="$(arg tango_sim)">
+    <!--add simulation params here-->
+    
+    <!--Wheelchair cmd_vel driver-->
+    <param name="/tango/param/cmd_vel" type="string" value="/tango/cmd_vel" />
+
+  </group>
+  <group unless="$(arg tango_sim)">
+    <!--add physical params here-->
+
+    <!--Wheelchair cmd_vel driver-->
+    <param name="/tango/param/cmd_vel" type="string" value="/cmd_vel" />
+  </group>
+
+  <include file="$(find tango_control)/launch/serial.launch"/>
+  <node pkg="tango_control" type="motors" name="motors" output="screen"/>
+  <node pkg="tango_control" type="encoders" name="encoders" output="screen"/>
+  <node pkg="tango_control" type="infrareds" name="infrareds" output="screen"/>
+
+</launch>
