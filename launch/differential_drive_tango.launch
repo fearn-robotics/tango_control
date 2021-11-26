@@ -5,7 +5,7 @@
     <rosparam param="ticks_meter">5520</rosparam>
   <rosparam param="base_width">0.28</rosparam>
 
-  <node pkg="differential_drive" type="pid_velocity" name="lpid_velocity">
+  <node pkg="differential_drive" type="pid_velocity.py" name="lpid_velocity">
       <remap from="wheel" to="lwheel"/>
       <remap from="motor_cmd" to="lmotor_cmd"/>
       <remap from="wheel_vtarget" to="lwheel_vtarget"/>
@@ -22,7 +22,7 @@
       <rosparam param="rolling_pts">10</rosparam>
   </node>
   
-  <node pkg="differential_drive" type="pid_velocity" name="rpid_velocity">
+  <node pkg="differential_drive" type="pid_velocity.py" name="rpid_velocity">
       <remap from="wheel" to="rwheel"/>
       <remap from="motor_cmd" to="rmotor_cmd"/>
       <remap from="wheel_vtarget" to="rwheel_vtarget"/>
