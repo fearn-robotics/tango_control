@@ -1,0 +1,36 @@
+<launch>
+<arg name="bag_location" />
+
+      <node pkg="rosbag" type="record" name="rosbag_record_tango"
+            args="record --buffsize=0 --chunksize=0 -o $(arg bag_location) 
+            /cmd_vel
+            /diagnostics
+            /infrareds
+            /joint_states
+            /lmotor_cmd
+            /lwheel
+            /lwheel_vel
+            /lwheel_vtarget
+            /motor_commands
+            /odom
+            /rmotor_cmd
+            /rwheel
+            /rwheel_vel
+            /rwheel_vtarget
+            /tango/ir_sensors/front_c_ir
+            /tango/ir_sensors/front_l_inner_ir
+            /tango/ir_sensors/front_l_outer_ir
+            /tango/ir_sensors/front_r_inner_ir
+            /tango/ir_sensors/front_r_outer_ir
+            /tango/ir_sensors/rear_l_ir
+            /tango/ir_sensors/rear_r_ir
+            /tango_msgs/bumpers
+            /tango_msgs/fallsensors
+            /tango_msgs/relays
+            /scan
+            /tf
+            /tf_static
+            /wheel_encoders
+            " />
+
+</launch>
