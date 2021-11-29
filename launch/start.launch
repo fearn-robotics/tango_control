@@ -35,6 +35,9 @@
     <!-- Start differential drive controller -->
     <include file="$(find tango_control)/launch/differential_drive_tango.launch"/>
 
+    <!-- Start rplidar sensor -->
+    <include file="$(find rplidar_ros)/launch/tango_rplidar.launch"/>
+
     <!-- Start sensors -->
     <node pkg="tango_control" type="motors" name="motors" output="screen"/>
     <node pkg="tango_control" type="encoders" name="encoders" output="screen"/>
