@@ -1,0 +1,55 @@
+Tango - DF-Robot Operation Manual (v1.0 - November 2021)
+
+Author - Tomos Fearn (tof7@aber.ac.uk)
+
+Step-by-step instructions
+
+turn-on robot:
+1) Turn on the robot from the red button
+2) Turn on the laptop, signin using the password stream11 - make sure the desktop shows up and is connected to rosbox wifi, now you can close the lid.
+2) Ensure both USB cables from the robot are connected to the laptop
+
+from the remote pc:
+connect to rosbox wifi
+start up terminal/powershell
+start->powershell
+type:
+ssh tomos@192.168.1.75
+confirm security exeption
+type in password stream11
+
+start up multiplexer:
+tmux
+
+start up robot services:
+roslaunch tango_control start.launch
+
+create a new terminal window:
+CTRL+b followed by c
+
+start up remote control
+roslaunch tango_teleop tango_teleop_key.launch
+
+move robot commands:
+w forward, a left, d right, x reverse, space stop
+
+create a new terminal window:
+CTRL+b followed by c
+
+start data recording:
+roslaunch tango_control rosbag-record.launch bag_location:=/home/tomos/add-name-here.bag
+
+data files get saved in the home directory as <add-name-here.bag>
+
+stop data recording/robot services:
+
+CTRL+c
+
+moving between service windows:
+CTRL+b 0   /   CTRL+b 1    /   CTRL+b 2
+
+shutdown pc:
+sudo shutdown -h now
+
+shutdown robot:
+unplug USB cables from laptop and press red power switch
