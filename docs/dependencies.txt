@@ -1,0 +1,9 @@
+Tango - Dependencies (v1.0 - December 2021)
+
+Author - Tomos Fearn (tof7@aber.ac.uk)
+
+sudo apt-get install ros-noetic-desktop-full
+sudo apt-get install ros-noetic-joy
+sudo apt-get install ros-noetic-rosserial ros-noetic-rosserial-arduino 
+sudo apt-get install ros-noetic-turtlebot3-teleop 
+
