@@ -2,6 +2,12 @@ Tango - Dependencies (v1.0 - December 2021)
 
 Author - Tomos Fearn (tof7@aber.ac.uk)
 
+ROS version installed on robot is ROS1 melodic - on Ubuntu MATE 18.04
+Newer versions of ROS are compatible (e.g. Noetic), new nodes should be
+written in Python3 and above or C++ with cmake compiler version 11 or above.
+
+For other versions of ROS, change ros-noetic* to ros-melodic etc.
+
 sudo apt-get install ros-noetic-desktop-full
 sudo apt-get install ros-noetic-joy
 sudo apt-get install ros-noetic-rosserial ros-noetic-rosserial-arduino 
