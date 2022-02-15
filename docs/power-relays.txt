@@ -1,0 +1,15 @@
+number 0 nothing
+number 1 - Changing state of motor controller power relay
+	state 0 off
+	state 1 on
+number 2 - Changing state of unused power relay
+number 3 - Changing state of infrared sensors power relay
+	state 0 off
+	state 1 on
+number 4 - Changing state of IMU and fall sensors power relay
+	state 0 off
+	state 1 on
+number 5 - Changing state of slam device power relay
+	state 0 off
+	state 1 on
+	
