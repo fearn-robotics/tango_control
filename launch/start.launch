@@ -42,6 +42,9 @@
     <node pkg="tango_control" type="motors" name="motors" output="screen"/>
     <node pkg="tango_control" type="encoders" name="encoders" output="screen"/>
     <node pkg="tango_control" type="infrareds" name="infrareds" output="screen"/>
+
+    <!-- Start safety tools -->
+    <node pkg="tango_control" type="safety" name="safety" output="screen"/>
   </group>
 
 </launch>

@@ -139,6 +139,7 @@ include_directories(
 add_executable(encoders src/encoders.cpp)
 add_executable(motors src/motors.cpp)
 add_executable(infrareds src/infrareds.cpp)
+add_executable(safety src/safety.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -153,6 +154,7 @@ add_dependencies(encoders tango_control_generate_messages_cpp)
 add_dependencies(motors tango_control_generate_messages_cpp)
 add_dependencies(infrareds tango_control_generate_messages_cpp)
 
+
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
@@ -160,6 +162,7 @@ add_dependencies(infrareds tango_control_generate_messages_cpp)
 target_link_libraries(encoders ${catkin_LIBRARIES})
 target_link_libraries(motors ${catkin_LIBRARIES})
 target_link_libraries(infrareds ${catkin_LIBRARIES})
+target_link_libraries(safety ${catkin_LIBRARIES})
 
 
 
