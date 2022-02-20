@@ -1,0 +1,3 @@
+<launch>  
+  <node pkg="tango_control" type="slam_relay.py" name="slam_relay_node" />
+</launch>

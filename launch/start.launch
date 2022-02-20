@@ -34,6 +34,9 @@
 
     <!-- Start differential drive controller -->
     <include file="$(find tango_control)/launch/differential_drive_tango.launch"/>
+    
+    <!-- Start relay for rplidar sensor -->
+    <include file="$(find tango_control)/launch/slam_relay.launch"/>
 
     <!-- Start rplidar sensor -->
     <include file="$(find rplidar_ros)/launch/tango_rplidar.launch"/>
