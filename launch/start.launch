@@ -38,16 +38,15 @@
     <!-- Start relay for rplidar sensor -->
     <include file="$(find tango_control)/launch/slam_relay.launch"/>
 
-    <!-- Start rplidar sensor -->
-    <include file="$(find rplidar_ros)/launch/tango_rplidar.launch"/>
-
     <!-- Start sensors -->
     <node pkg="tango_control" type="motors" name="motors" output="screen"/>
     <node pkg="tango_control" type="encoders" name="encoders" output="screen"/>
     <node pkg="tango_control" type="infrareds" name="infrareds" output="screen"/>
+    
+        <!-- Start rplidar sensor -->
+    <include file="$(find rplidar_ros)/launch/tango_rplidar.launch"/>
 
-    <!-- Start safety tools -->
-    <node pkg="tango_control" type="safety" name="safety" output="screen"/>
+
   </group>
 
 </launch>
