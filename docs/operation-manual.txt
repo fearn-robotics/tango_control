@@ -27,6 +27,9 @@ roslaunch tango_control start.launch
 create a new terminal window:
 CTRL+b followed by c
 
+start up safety node (motor relays)
+roslaunch tango_control safety.launch
+
 start up remote control
 roslaunch tango_teleop tango_teleop_key.launch
 
