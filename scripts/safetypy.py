@@ -39,7 +39,6 @@ def opening_safety():
     print ("relays enabled - ENGAGED")
     motor_msg = relays()
     infrared_msg = relays()
-    lidar_msg = relays()
     #if (count < 2) :
     for i in range(0,5):
         motor_msg.number = 1
@@ -48,9 +47,6 @@ def opening_safety():
         infrared_msg.number = 3
         infrared_msg.state = 1
         safety_pub.publish(infrared_msg)
-        lidar_msg.number = 5
-        lidar_msg.state = 1
-        safety_pub.publish(lidar_msg)
         rospy.sleep(0.5)
     #print("starting up")
 
@@ -58,7 +54,6 @@ def closing_safety():
     print ("relays disabled - DISENGAGED")
     motor_msg = relays()
     infrared_msg = relays()
-    lidar_msg = relays()
     #if (count < 2) :
     for i in range(0,5):
         motor_msg.number = 1
@@ -67,9 +62,6 @@ def closing_safety():
         infrared_msg.number = 3
         infrared_msg.state = 0
         safety_pub.publish(infrared_msg)
-        lidar_msg.number = 5
-        lidar_msg.state = 0
-        safety_pub.publish(lidar_msg)
         rospy.sleep(0.5)
     #print("shutting down")
     

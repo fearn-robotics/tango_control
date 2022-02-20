@@ -48,8 +48,6 @@ def opening_safety():
 
 def closing_safety():
     print ("relays disabled - DISENGAGED")
-    motor_msg = relays()
-    infrared_msg = relays()
     lidar_msg = relays()
     #if (count < 2) :
     for i in range(0,5):
