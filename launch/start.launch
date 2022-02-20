@@ -43,8 +43,8 @@
     <node pkg="tango_control" type="encoders" name="encoders" output="screen"/>
     <node pkg="tango_control" type="infrareds" name="infrareds" output="screen"/>
     
-        <!-- Start rplidar sensor -->
-    <include file="$(find rplidar_ros)/launch/tango_rplidar.launch"/>
+    <!-- Start rplidar sensor -->
+    <!--<include file="$(find rplidar_ros)/launch/tango_rplidar.launch"/>-->
 
 
   </group>
