@@ -24,6 +24,10 @@ tmux
 start up robot services:
 roslaunch tango_control start.launch
 
+if you want to start up the lidar, use:
+roslaunch rplidar_ros tango_rplidar.launch
+(alternatively, uncomment the include line from start.launch in tango_control)
+
 create a new terminal window:
 CTRL+b followed by c
 
