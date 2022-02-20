@@ -1,0 +1,3 @@
+<launch>  
+  <node pkg="tango_control" type="safetypy.py" name="safety_node" />
+</launch>
