@@ -14,9 +14,9 @@ connect to rosbox wifi
 start up terminal/powershell
 start->powershell
 type:
-ssh tomos@192.168.1.75
+ssh ubuntu@192.168.2.2
 confirm security exeption
-type in password stream11
+type in password robotics
 
 start up multiplexer:
 tmux
