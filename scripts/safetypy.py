@@ -51,6 +51,15 @@ def opening_safety():
     #print("starting up")
 
 def closing_safety():
+    twist_msg = Twist()
+    twist_msg.linear.x = 0
+    twist_msg.linear.y = 0
+    twist_msg.linear.z = 0
+    twist_msg.angular.x = 0
+    twist_msg.angular.y = 0
+    twist_msg.angular.z = 0
+    drive_pub.publish(twist_msg)
+    
     print ("relays disabled - DISENGAGED")
     motor_msg = relays()
     infrared_msg = relays()
@@ -74,6 +83,7 @@ if __name__=="__main__":
     time.sleep(1)
 
     safety_pub = rospy.Publisher("/tango_msgs/relays", relays, queue_size=100)
+    drive_pub = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
     opening_safety()
     try:
         while(1):
