@@ -59,7 +59,7 @@ def closing_safety():
     twist_msg.angular.y = 0
     twist_msg.angular.z = 0
     drive_pub.publish(twist_msg)
-    
+
     print ("relays disabled - DISENGAGED")
     motor_msg = relays()
     infrared_msg = relays()

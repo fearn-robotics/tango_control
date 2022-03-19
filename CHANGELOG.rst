@@ -2,6 +2,12 @@
 Changelog for package tango_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2022-03-18)
+------------------
+* updated documents for simulation
+* [bug fix] stop motors when safety node stops
+* Contributors: Tomos Fearn
+
 2.1.0 (2022-02-20)
 ------------------
 * Added safety features and updated documents

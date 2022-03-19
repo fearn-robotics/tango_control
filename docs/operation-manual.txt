@@ -70,5 +70,5 @@ start and close the start.launch to load the params needed
 roslaunch tango_control start.launch
 Use CTRL + c to stop launch file
 
-start Gazebo 
+start Gazebo
 roslaunch tango_simulation gazebo.launch
