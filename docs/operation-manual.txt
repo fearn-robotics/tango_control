@@ -11,6 +11,8 @@ turn-on robot:
 
 from the remote pc:
 connect to rosbox wifi
+details are rosnoetic
+
 start up terminal/powershell
 start->powershell
 type:
