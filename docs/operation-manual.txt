@@ -1,4 +1,4 @@
-Tango - DF-Robot Operation Manual (v1.0 - November 2021)
+Tango - DF-Robot Operation Manual (v2.1.1 - March 2022)
 
 Author - Tomos Fearn (tof7@aber.ac.uk)
 
