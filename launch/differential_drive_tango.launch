@@ -5,6 +5,9 @@
     <rosparam param="ticks_meter">5520</rosparam>
   <rosparam param="base_width">0.28</rosparam>
 
+
+  <!-- original vals = 150.0, 15.0, 0 -->
+  <!-- improved v1 = 100.0, 70.0, 0.0 -->
   <node pkg="differential_drive" type="pid_velocity.py" name="lpid_velocity">
       <remap from="wheel" to="lwheel"/>
       <remap from="motor_cmd" to="lmotor_cmd"/>
@@ -12,7 +15,7 @@
       <remap from="wheel_vel" to="lwheel_vel"/>
       <rosparam param="Kp">150.0</rosparam>
       <rosparam param="Ki">15.0</rosparam>
-      <rosparam param="Kd">0</rosparam>
+      <rosparam param="Kd">0.0</rosparam>
       <rosparam param="out_min">-127</rosparam>
       <rosparam param="out_max">127</rosparam>
       <rosparam param="rate">20</rosparam>
@@ -29,7 +32,7 @@
       <remap from="wheel_vel" to="rwheel_vel"/>
       <rosparam param="Kp">150.0</rosparam>
       <rosparam param="Ki">15.0</rosparam>
-      <rosparam param="Kd">0</rosparam>
+      <rosparam param="Kd">0.0</rosparam>
       <rosparam param="out_min">-127</rosparam>
       <rosparam param="out_max">127</rosparam>
       <rosparam param="rate">20</rosparam>
@@ -45,13 +48,14 @@
     <remap from="/twist" to="/cmd_vel" />
   </node>
 
-  <node pkg="differential_drive" type="diff_tf.py" name="diff_tf" output="screen">
+  <!--<node pkg="differential_drive" type="diff_tf.py" name="diff_tf" output="screen">
+    <remap from="/odom" to="/wheel_odom"/>
     <rosparam param="rate">10</rosparam>
     <rosparam param="base_frame_id">"base_link"</rosparam>
-    <rosparam param="odom_frame_id">"odom"</rosparam>
+    <rosparam param="odom_frame_id">"wheel-odom"</rosparam>
     <rosparam param="encoder_min">-32768</rosparam>
     <rosparam param="encoder_max">32768</rosparam>
-  </node>
+  </node> -->
 
 
 <!--<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />-->
