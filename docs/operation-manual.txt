@@ -1,4 +1,4 @@
-Tango - DF-Robot Operation Manual (v1.0 - November 2021)
+Tango - DF-Robot Operation Manual (v2.1.1 - March 2022)
 
 Author - Tomos Fearn (tof7@aber.ac.uk)
 
@@ -11,6 +11,8 @@ turn-on robot:
 
 from the remote pc:
 connect to rosbox wifi
+details are rosnoetic
+
 start up terminal/powershell
 start->powershell
 type:
@@ -60,3 +62,15 @@ sudo shutdown -h now
 
 shutdown robot:
 unplug USB cables from laptop and press red power switch
+
+
+Tango Simulation - Gazebo
+start roscore
+roscore
+
+start and close the start.launch to load the params needed
+roslaunch tango_control start.launch
+Use CTRL + c to stop launch file
+
+start Gazebo
+roslaunch tango_simulation gazebo.launch
