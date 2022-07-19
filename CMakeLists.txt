@@ -107,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES tango_control
-#  CATKIN_DEPENDS roscpp rospy std_msgs tango_description tango_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs tango_description tango_msgs
 #  DEPENDS system_lib
 )
 
@@ -149,9 +149,9 @@ add_executable(infrareds src/infrareds.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(encoders tango_control_generate_messages_cpp)
-add_dependencies(motors tango_control_generate_messages_cpp)
-add_dependencies(infrareds tango_control_generate_messages_cpp)
+#add_dependencies(encoders tango_control_generate_messages_cpp)
+#add_dependencies(motors tango_control_generate_messages_cpp)
+#add_dependencies(infrareds tango_control_generate_messages_cpp)
 
 
 ## Specify libraries to link a library or executable target against
